@@ -19,4 +19,12 @@ function displayHikeInfo() {
       imgEvent.src = "../images/" + hikeCode + ".jpg";
     });
 }
+
+function saveHikeDocumentIDAndRedirect() {
+  let params = new URL(window.location.href);
+  let ID = params.searchParams.get("docID");
+  localStorage.setItem("hikeDocID", ID);
+  window.location.href = "review.html";
+}
+
 displayHikeInfo();
