@@ -157,6 +157,7 @@ function displayCardsDynamically(collection) {
         currentUser.get().then((userDoc) => {
           //get the user name
           var bookmarks = userDoc.data().bookmarks;
+          console.log(bookmarks);
           if (bookmarks.includes(docID)) {
             document.getElementById("save-" + docID).innerText = "bookmark";
           }
